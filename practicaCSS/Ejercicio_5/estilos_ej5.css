@@ -1,0 +1,65 @@
+
+/*1*/
+p {
+    color:red;
+}
+/*2*/
+div p a:link{
+
+    color: black;
+}
+
+/*3*/
+.ultimo ul li {
+    color: yellow;
+}
+
+.ultimo ul li :link{
+
+    color: blue;
+}
+
+/*4*/
+:root{
+    --my-color:green;
+}
+
+.importante *{
+    color:var(--my-color);
+}
+
+.importante h1{
+    --my-color:red;
+    color: var(--my-color);
+}
+
+/*5*/
+
+h1[title] {
+    color: blue;
+  }
+  
+/*6*/
+
+ol li  a {
+    text-decoration: none;
+}
+
+ol li  a :link {
+    color: blue;
+}
+
+ol li a:visited{
+    color:fuchsia
+}
+    
+ol li a:active {
+    color:red 
+}
+
+ol li a:hover {
+    color:black
+}
+
+
+
