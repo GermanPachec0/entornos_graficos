@@ -7,7 +7,13 @@
     <title>Document</title>
 </head>
 <body>
+
+
   <?php
+    if (!isset($_POST['submit'])) {
+    ?>
+
+<?php
     function comprobar_nombre_usuario($nombre_usuario){
         //compruebo que el tamaño del string sea válido.
         if (strlen($nombre_usuario)<3 || strlen($nombre_usuario)>20){
@@ -28,17 +34,24 @@
             }
         }
     }
-
     
-    if($nombreUsu=comprobar_nombre_usuario("hoola"))
-    {   
-        echo $nombreUsu;
-    }
-    else{
-        echo $nombreUsu;
-    }
+  ?>
 
+  <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
+        <label>Ingresar tu nombre</label>
+        Nombre: <input name="nombre" size="5">
+        <input type="submit" name="Validar Usuario">
+  </form>
 
+  <?php 
+  
+    if(empty($_POST["nombre"]))
+    {
+        echo "";
+    }else{
+    echo comprobar_nombre_usuario($_POST["nombre"]);
+    }
+}
   ?>
 </body>
 </html>
