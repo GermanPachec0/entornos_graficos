@@ -29,7 +29,7 @@ try {
 
     //Recipients
     $emailTo=$_POST["nuevoEmail"];
-    $mail->setFrom('proplays98@gmail.com', 'Mailer');
+    $mail->setFrom('emailprueba@gmail.com', 'Mailer');
     $mail->addAddress($emailTo, 'Joe User');     //Add a recipient
 
     //Optional name
